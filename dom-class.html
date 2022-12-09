@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Class</title>
+    <style>
+        .button{
+            color: white;
+            background-color: cornflowerblue;
+            font-size: larger;
+            padding: 5px 10px;
+            font-weight: 600;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" id="s1">See S1 Detail</button>
+    <button class="button" id="s2">See S2 Detail</button>
+    <script>
+        class Results {
+            name;
+            GPA;
+            school = 'Rajdhani';
+            address = 'DIT Road Rampura'
+            session= 2022;
+
+            constructor(name,gpa){
+                this.name = name;
+                this.GPA = gpa;
+            }
+        }
+
+
+        document.getElementById('s1').addEventListener('click',function(){
+            const student1 = new Results('Afrin', 4.72)
+            console.log(student1)
+        })
+        document.getElementById('s2').addEventListener('click',function(){
+            const student2 = new Results('Sourav', 4.50)
+            console.log(student2)
+        })
+    </script>
+</body>
+</html>
